@@ -3,7 +3,7 @@
 Code samples to interact with C in a Go program and the other way around.
 There are two main folders:
 1. *SharedDynamic:* Include code as dynamic library (the makefiles target a Linux environment).
-2. *Static:* Statically link (or compile everything at once).
+2. *Static:* Statically linked (or compile everything at once).
 
 # How to build
 
