@@ -1,8 +1,11 @@
-#How to interact between Go and C without creating shared libraries.
+# How to interact between Go and C without creating shared libraries.
 
-In this folder we have example of Go code calling C functions and C functions executing Go code.
-For Go calling C, the go compiler enables to compile everything in one stage with a simple 'go buil'.
-The entry point of the program needs to be in the Go code.
+This folder contains C and Go code that interact statically.
 
-Unfortunately, I didn't find how to make the entry point in C and instead provide an example where the go compiler generates a static archive that is passed as an argument to gcc when building the C code.
+The **go** compiler is able to compile everything in one stage as long as the program's entry point is the Go code (simple 'go build' works).
+In the *Static/CFromGo* folder, the code sample calls C functions from Go, and Go functions from C.
+
+To have an entry point in the C code instead, I had to generate a static archive from the Go code and link it to the C application (see *Static/GoFromC*).
+
+**TODO**: Find if it is possible to import Go code inside C, with the program entry point in C.
 
